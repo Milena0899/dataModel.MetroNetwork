@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "$id": "https://fiware.github.io/data-models/specs/AgriFood/AgriParcel/schema.json",
+    "$id": "https://raw.githubusercontent.com/Milena0899/dataModel.MetroNetwork/main/Network/network-schema.json",
     "title": "Metro Network schema",
     "description": "Defintions to describe FIWARE metro network data models",
     "type": "object",
@@ -45,7 +45,7 @@
             ]
           },
           "Node": {
-            "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.AutonomousMobileRobot/master/AutonomousMobileRobot-schema.json#/definitions/commandTime",
+            "$ref": "https://raw.githubusercontent.com/Milena0899/dataModel.MetroNetwork/main/Network/Node/node-schema.json",
             "description": "Relashionship. Reference to the node entity"
           }
         }

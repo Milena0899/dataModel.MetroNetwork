@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://fiware.github.io/data-models/specs/AgriFood/AgriParcel/schema.json",
+  "$id": "https://raw.githubusercontent.com/Milena0899/dataModel.MetroNetwork/main/Network/Route/route-schema.json",
   "title": "Route schema",
   "description": "Defintions to describe FIWARE node network data models",
   "type": "object",
