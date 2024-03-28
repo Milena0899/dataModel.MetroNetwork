@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://fiware.github.io/data-models/specs/AgriFood/AgriParcel/schema.json",
+  "title": "Route schema",
+  "description": "Defintions to describe FIWARE node network data models",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["Route"],
+          "description": "NGSI Entity Type"
+        },
+        "numberOfPoles": {
+          "type": "number",
+          "description": "Property. Model:'http://schema.org/Number'. Node IP"
+        }
+      }
+    }
+  ],
+  "required": ["id", "type"]
+}

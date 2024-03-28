@@ -1,0 +1,56 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "https://fiware.github.io/data-models/specs/AgriFood/AgriParcel/schema.json",
+    "title": "Metro Network schema",
+    "description": "Defintions to describe FIWARE metro network data models",
+    "type": "object",
+    "allOf": [
+      {
+        "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+      },
+      {
+        "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+      },
+      {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["MetroNetwork"],
+            "description": "NGSI Entity Type"
+          },
+          "topology": {
+            "type": "string",
+            "enum": [
+                "star",
+                "bus",
+                "hybrid",
+                "mesh",
+                "ring",
+                "tree"
+            ],
+            "description": "Property. Model:'http://schema.org/Text'. Current state of network topology."
+          },
+          "totalLenght": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Property. Model:'http://schema.org/Number'. Metro network model length in kilometers. Units:'kilometers'"
+          },
+          "transmissionType": {
+            "type": "string",
+            "enum": [
+                "fiber",
+                "3G",
+                "4G",
+                "copper"
+            ]
+          },
+          "Node": {
+            "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.AutonomousMobileRobot/master/AutonomousMobileRobot-schema.json#/definitions/commandTime",
+            "description": "Relashionship. Reference to the node entity"
+          }
+        }
+      }
+    ],
+    "required": ["id", "type", "Node"]
+  }
+  

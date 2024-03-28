@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://fiware.github.io/data-models/specs/AgriFood/AgriParcel/schema.json",
+  "title": "Node schema",
+  "description": "Defintions to describe FIWARE node network data models",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["Node"],
+          "description": "NGSI Entity Type"
+        },
+        "nodeIP": {
+          "type": "string",
+          "description": "Property. Model:'http://schema.org/Text'. Node IP"
+        },
+        "Route": {
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.AutonomousMobileRobot/master/AutonomousMobileRobot-schema.json#/definitions/commandTime",
+          "description": "Relashionship. Reference to the node entity"
+        }
+      }
+    }
+  ],
+  "required": ["id", "type", "nodeIP"]
+}
