@@ -1,56 +1,78 @@
 {
-    "$schema": "http://json-schema.org/schema#",
-    "$id": "https://raw.githubusercontent.com/Milena0899/dataModel.MetroNetwork/main/Network/network-schema.json",
-    "title": "Metro Network schema",
-    "description": "Defintions to describe FIWARE metro network data models",
-    "type": "object",
-    "allOf": [
-      {
-        "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
-      },
-      {
-        "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/Location-Commons"
-      },
-      {
-        "properties": {
-          "type": {
-            "type": "string",
-            "enum": ["MetroNetwork"],
-            "description": "NGSI Entity Type"
-          },
-          "topology": {
-            "type": "string",
-            "enum": [
-                "star",
-                "bus",
-                "hybrid",
-                "mesh",
-                "ring",
-                "tree"
-            ],
-            "description": "Property. Model:'http://schema.org/Text'. Current state of network topology."
-          },
-          "totalLenght": {
-            "type": "number",
-            "minimum": 0,
-            "description": "Property. Model:'http://schema.org/Number'. Metro network model length in kilometers. Units:'kilometers'"
-          },
-          "transmissionType": {
-            "type": "string",
-            "enum": [
-                "fiber",
-                "3G",
-                "4G",
-                "copper"
-            ]
-          },
-          "Node": {
-            "$ref": "https://raw.githubusercontent.com/Milena0899/dataModel.MetroNetwork/main/Network/Node/node-schema.json",
-            "description": "Relashionship. Reference to the node entity"
-          }
+  "$schema": "http://json-schema.org/schema",
+  "$schemaVersion": "0.0.1",
+  "$id": "https://smart-data-models.github.io/XXXSubjectXXX/Network/schema.json",
+  "title": "Smart Data models - MetroNetwork schema\"",
+  "modelTags": "\"\"",
+  "description": "description of a generic entity. You have to change this.",
+  "type": "object",
+  "required": [
+    "id",
+    "type"
+  ],
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "MetroNetwork",
+            "teste"
+          ],
+          "description": "Property. Model:'https://schema.org/Text'. Example of definition of a numerical attribute"
+        },
+        "topology": {
+          "type": "string",
+          "enum": [
+            "star",
+            "bus",
+            "hybrid",
+            "mesh",
+            "ring",
+            "tree"
+          ],
+          "description": "Property. Model:'http://schema.org/Text'. Current state of network topology."
+        },
+        "totalLenght": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Model:'http://schema.org/Number'. Metro network model length in kilometers. Units:'kilometers'"
+        },
+        "transmissionType": {
+          "type": "string",
+          "enum": [
+            "3G",
+            "4G",
+            "5G",
+            "cooper",
+            "fiber"
+          ],
+          "description": "Property. Model:'http://schema.org/Text'. Current state of network topology."
+        },
+        "field3XXX": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/Text'. Example of definition of a date-time attribute"
+        },
+        "Node": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "https://raw.githubusercontent.com/Milena0899/dataModel.MetroNetwork/main/Network/Node/node-schema.json",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. Reference to the other entity"
         }
       }
-    ],
-    "required": ["id", "type", "Node"]
-  }
-  
+    }
+  ],
+  "derivedFrom": "\"\"",
+  "license": "\"\""
+}

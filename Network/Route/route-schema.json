@@ -1,29 +1,39 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$id": "https://raw.githubusercontent.com/Milena0899/dataModel.MetroNetwork/main/Network/Route/route-schema.json",
-  "title": "Route schema",
-  "description": "Defintions to describe FIWARE node network data models",
+  "$schema": "http://json-schema.org/schema",
+  "$schemaVersion": "0.0.1",
+  "$id": "https://smart-data-models.github.io/XXXSubjectXXX/Route/schema.json",
+  "title": "Smart Data models - Route schema\"",
+  "modelTags": "\"\"",
+  "description": "description of a generic entity. You have to change this.",
   "type": "object",
+  "required": [
+    "id",
+    "type"
+  ],
   "allOf": [
     {
-      "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
     },
     {
-      "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
     {
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["Route"],
+          "enum": [
+            "Route"
+          ],
           "description": "NGSI Entity Type"
         },
         "numberOfPoles": {
           "type": "number",
+          "minimum": 0,
           "description": "Property. Model:'http://schema.org/Number'. Node IP"
         }
       }
     }
   ],
-  "required": ["id", "type"]
+  "derivedFrom": "\"\"",
+  "license": "\"\""
 }

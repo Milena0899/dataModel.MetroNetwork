@@ -1,33 +1,48 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$id": "https://raw.githubusercontent.com/Milena0899/dataModel.MetroNetwork/main/Network/Node/node-schema.json",
-  "title": "Node schema",
-  "description": "Defintions to describe FIWARE node network data models",
+  "$schema": "http://json-schema.org/schema",
+  "$schemaVersion": "0.0.1",
+  "$id": "https://smart-data-models.github.io/XXXSubjectXXX/Node/schema.json",
+  "title": "Smart Data models - Node schema\"",
+  "modelTags": "\"\"",
+  "description": "description of a generic entity. You have to change this.",
   "type": "object",
+  "required": [
+    "id",
+    "type"
+  ],
   "allOf": [
     {
-      "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
     },
     {
-      "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
     {
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["Node"],
-          "description": "NGSI Entity Type"
+          "enum": [
+            "Node"
+          ],
+          "description": "Property. Model:'https://schema.org/Text'. Example of definition of a numerical attribute"
         },
-        "nodeIP": {
+        "nodeIp": {
           "type": "string",
           "description": "Property. Model:'http://schema.org/Text'. Node IP"
         },
-        "Route": {
-          "$ref": "https://raw.githubusercontent.com/Milena0899/dataModel.MetroNetwork/main/Network/Route/route-schema.json",
+        "relationship1XX": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "https://raw.githubusercontent.com/Milena0899/dataModel.MetroNetwork/main/Network/Route/route-schema.json\"",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
           "description": "Relashionship. Reference to the node entity"
         }
       }
     }
   ],
-  "required": ["id", "type", "nodeIP"]
+  "derivedFrom": "\"\"",
+  "license": "\"\""
 }
