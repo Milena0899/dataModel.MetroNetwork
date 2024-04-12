@@ -1,10 +1,10 @@
 {
   "$schema": "http://json-schema.org/schema",
   "$schemaVersion": "0.0.1",
-  "$id": "https://smart-data-models.github.io/XXXSubjectXXX/Route/schema.json",
-  "title": "Smart Data models - Route schema\"",
+  "$id": "https://raw.githubusercontent.com/Milena0899/dataModel.MetroNetwork/main/Network/Route/route-schema.json",
+  "title": "Smart Data models - Route schema",
   "modelTags": "\"\"",
-  "description": "description of a generic entity. You have to change this.",
+  "description": "Defintions to describe FIWARE node network data models",
   "type": "object",
   "required": [
     "id",
